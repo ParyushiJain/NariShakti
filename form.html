@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        
+        form
+    </title>
+    <div class="navigation-bar" >
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="index.html">Nari Shakti</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse justify-content-end" id="navbar">
+            <ul class="navbar-nav ml-auto" >
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="admin.html">Admin</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+</head>
+<body>
+    <div class="backbtn">
+        <input type="submit" value="Back" class="btn btn-primary" id="backbtn" onclick="history.back()">
+    </div>
+    <div class="file" id="file">
+        <div class="container">
+         
+         <div class="card-m-4">
+             <div class="card-body">
+                 <h2 class="pt-4">
+                   <h3> File a complaint</h3>
+                  
+                   <div class="row">
+                      
+                     <div style="width: 280px; height: 80px;" class="form-group required">
+                         <label for="Name of the reporter" class="control-label">Name of the reporter</label>
+                         <input type="text"  style="width: 200px;" id="namer" placeholder="Name" class="form-control form-control-sm"/>
+                     </div>
+                     <div  style="width: 280px;" class="form-group required ">
+                         <label for="contact info of the reporter" class="control-label">Contant Number of the reporter</label>
+                         <input type="number"  style="width: 200px;"class="form-control form-control-sm phone" placeholder="Contact Number " id="contr"maxlength="10" autocomplete="off"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); "/>
+ 
+                     </div>
+                    </div>
+ 
+                     <div class="form-group  required" style="width: 280px; height: 80px;">
+                         <label  for="relation to the victim" class="control-label">Relation to the Victim</label>
+                         <input type="text" style="width: 200px;" id="relr" placeholder="Relation with you" class="form-control form-control-sm"/>
+                     </div>
+                     <div class="row">
+                     <div class="form-group  required" style="width: 280px; height: 80px;">
+                        <label for="Name of the victim" class="control-label">Name of the victim</label>
+                        <input type="text" style="width: 200px;" id="namev" placeholder="Name" class="form-control form-control-sm"/>
+                    </div>
+
+                    <div class="form-group" style="width: 350px; height: 80px;">
+                        <label for="contact info of the victim" class="control-label" >Contant Number of the Victim</label>
+                        <input type="number" style="width: 200px;" class="form-control form-control-sm" placeholder="Contact Number " id="contv" maxlength="10" autocomplete="off"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); "/>
+
+                    </div>
+                </div>
+
+                    
+                    <div class="form-group  required" style="width: 280px;height: 150px;">
+                        <label for="Address of the victim" class="control-label">Address of the victim</label>
+                        <textarea id="addv" cols="59" rows="3" class="form-control"></textarea>
+                   
+                    </div>
+
+                    <div class="row">
+                    
+                    <div class="form-group  required" style="width: 280px;height: 80px;">
+                        <label for="Name of the abuser" class="control-label">Name of the abuser</label>
+                        <input type="text" id="nameab" placeholder="Name" class="form-control form-control-sm"/>
+                    </div>
+
+
+                    <div class="form-group  required" style="width: 280px; ">
+                        <label for="relation of the victim with abuser "class="control-label">Relation of the Victim with abuser</label>
+                        <input type="text" id="relab" placeholder="Relation with abuser" class="form-control form-control-sm"/>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group  required" style="width: 430px; height: 110px;">
+                        <label for="sel1" class="control-label">Select kind of abuse:</label>
+                        <select class="form-control form-select form-select-sm" id="sel1">
+                        <option>Click here to Select</option>
+                        <option value="Kidnapping">Kidnapping</option>
+                        <option value="Eve-Teasing">Eve Teasing</option>
+                        <option value="Chain-snatching">Chain snatching </option>
+                        <option value="Rape">Rape </option>
+                        <option value="Sexual-Harassment">Sexual Harassment</option>
+                        <option value="Domestic-Violence">Domestic Violence</option>
+                        <option value="Honor-Killing">Honor Killing</option>
+                        <option value="Cyber-Crimes">Cyber Crimes (Bullying, Abuse, Violence, Pornography)</option>
+                        <option value="Dowry-deaths">Dowry deaths</option>
+                        <option value="Acid-Attacks">Acid Attacks </option>
+                        <option value="Stalking">Stalking</option>
+                        <option value="Assault">Assault to outrage modesty</option>
+                        <option value="trafficking">Women trafficking</option>
+                        </select>
+                    </div>
+                    <div class="content">
+                        <div class="data" id="Kidnapping">
+                            <span>Abduct someone and hold them captive in any form,offence under IPC Sec 359,360,366</span>
+                        </div>
+                        <div class="data" id="Eve-Teasing">
+                           <span>Staring, stalking, passing comments, and inappropriate physical touch,offence under IPC Sec 509</span>
+                       </div>
+                       <div class="data" id="Chain-snatching">
+                           <span>Common crime form,offence under IPC Sec 378</span>
+                       </div>
+                       <div class="data" id="Rape">
+                           <span>Forced physical interaction,offence under IPC Sec 376,376A,376B,376C,376D</span>
+                       </div>
+                       <div class="data" id="Sexual-Harassment">
+                           <span>Unwelcomed sexual behaviour that's offensive, humiliating or intimidating,offence under IPC Sec 354A</span>
+                       </div>
+                       <div class="data" id="Domestic-Violence">
+                           <span>Physical, sexual, emotional, social, verbal, spiritual and economic abuse inside walls, offence under IPC Sec 498A</span>
+                       </div>
+                       <div class="data" id="Honor-Killing">
+                           <span>Killing of a girl or woman, who is perceived to have brought dishonour on the family/community,offence under IPC Sec 300,302</span>
+                       </div>
+                       <div class="data" id="Cyber-Crimes">
+                           <span>IPC Sec 509/ Sec 67,67A,67B of IT Act</span>
+                       </div>
+                       <div class="data" id="Dowry-deaths">
+                           <span>Murdered or driven to suicide by husband or in-laws over dowry disputes,offence under IPC Sec 304B</span>
+                       </div>
+                       <div class="data" id="Acid-Attacks">
+                           <span>Premeditated throwing of acid,offence under IPC Sec 326A,326B</span>
+                       </div>
+                       <div class="data" id="Stalking">
+                           <span>Unwanted and/or repeated surveillance,offence under IPC Sec 354D</span>
+                       </div>
+                       <div class="data" id="Assault">
+                           <span>Physical attack,offence under IPC Sec 354,354B</span>
+                       </div>
+                       <div class="data" id="trafficking">
+                           <span>Recruiting, transporting, transferring, harbouring or receiving by deception or abuse,offence under IPC Sec 370,370A,372,373</span>
+                       </div>
+                       
+                    </div>
+                </div>
+
+
+                    <div class="form-group " style="width: 280px;height: 150px;">
+                        <label for="comments" class="control-label"> Comments </label>
+                        <textarea id="comm" cols="59" rows="3" class="form-control"></textarea>
+                     
+                 
+
+                </div>
+ 
+                     <input type="submit" value="Submit" class="btn btn-primary" id="submitBtn">
+       
+                 </h2>
+             </div>
+         </div>
+     </div>
+  
+   </div>
+   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="form.js"></script>
+  
+</body>

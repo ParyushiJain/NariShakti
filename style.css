@@ -1,0 +1,210 @@
+.file{
+   line-height: 3.3em;
+}
+#sel1{
+   width: 100%;
+   padding: 15px;
+   appearance: none;
+   height: 50%;
+   background: url(down.png) no-repeat;
+   background-position: 95% 55%;
+}
+.data{
+   color: red;
+   font-weight: bold;
+}
+.form-group.required .control-label:before{
+   color: red;
+   content: "*";
+   position: absolute;
+   margin-left: -15px;
+}
+
+body{
+   padding-top: 3rem;
+   }
+.navbar-brand{
+   margin-left: 6%;
+} 
+.navbar-nav{
+   margin-right: 6%;
+}
+.nav-item{
+   margin: auto;
+}
+.wrapper{
+   margin-top: 5em;
+}
+
+.track-status{
+   margin-top: 2em;
+}
+#mob-auth{
+   margin-top: 6em;
+   line-height: 2em;
+}
+.auth input{
+	font-family:  Cambria, serif;
+	display: block;
+	border-radius: 5px;
+	background: #fff;
+	padding: 20px;
+	width: 100%;
+	outline: none;
+	margin-bottom: 20px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+.auth input:focus{
+	border: 1px solid #777;
+}
+.auth button:hover{
+	background: #fff;
+	color: #5d8ffc;
+	border: 1px solid #5d8ffc;
+	cursor: pointer;
+}
+.auth{
+	width: 20%;
+	margin: 0px auto;
+}
+#logout{
+	float: right;
+}
+
+#login-div{
+   margin-top: 2em;
+   width: 20%;
+}
+
+
+/* .seperator{
+   margin: 27% 0;
+} */
+
+#submitBtn{
+   margin-bottom: 2em;
+   margin-top: 1em;
+}
+#Sub{
+   margin-bottom: 2em;
+   margin-top: 1em;
+}
+
+#Update-Status{
+   margin-bottom: 2em;
+   margin-top: 1em;
+}
+#logout{
+   margin-top: 2em;
+}
+#upd-div{
+   background-color:#DCDCDC;
+   margin-bottom: 2em;
+   margin-top: 17%;
+}
+.backbtn{
+   padding-left: 3.5em;
+   margin-top: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+   #login-div{
+      width: 70%;
+  
+   }
+  
+#email_field{
+   width: 100%;
+   margin-left: 0%;
+   margin-right: 0%;
+   } 
+   #password_field{
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
+   }
+
+#recaptcha-container{
+   
+  
+}
+   
+ }
+
+.complaint-button{
+   margin-top: 1em;
+   margin-bottom: 2em;
+}
+
+
+ @media only screen and (max-width: 1300px) and (min-width:769px) {
+   .seperator{
+      margin: 25% 0;
+   }
+   #upd-div{
+      margin-top: 1em;
+   }
+  
+ }
+
+ @media only screen and (max-width: 150px) and (min-width:300px) {
+   .seperator{
+      margin: 50% 0;
+   }
+   #upd-div{
+      margin-top: 60em;
+   }
+  
+ }
+
+ @media only screen and (max-width: 768px) and (min-width:414px) {
+   .seperator{
+      margin: 40% 0;
+   }
+   #upd-div{
+      margin-top: 2.5em;
+   }
+  
+ }
+
+ @media only screen and (max-width: 992px) and (min-width:768px) {
+   .seperator{
+      margin: 40% 0;
+   }
+   #upd-div{
+      margin-top: 2.5em;
+   }
+  
+ }
+
+ @media only screen and (max-width: 413px) and (min-width:321px) {
+   .seperator{
+      margin: 40% 0;
+   }
+  
+
+ }
+ 
+ @media only screen and (max-width: 321px)  {
+   .seperator{
+      margin: 60% 0;
+   }
+   #upd-div{
+      margin-top: 2.5em;
+   
+   }
+  
+ }
+
+ html, body {
+   overflow-x: hidden;
+ }
+ body {
+   position: relative;
+ }
+
+ #statusdiv{
+    margin-top: 4em;
+ }

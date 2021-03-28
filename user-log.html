@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="navigation-bar" >
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <a class="navbar-brand" href="index.html">Nari Shakti</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar"
+                aria-expanded="false"
+                aria-controls="navbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <ul class="navbar-nav ml-auto" >
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="margin-top: 0.5em;">Login Via Mobile </h1>
+<div class="row">
+<div id="mob-auth">
+    
+        <form>
+            <input class="form-control form-control-sm"type="text" style="width: 280px;"  id="number" placeholder="+91********">
+            <div id="recaptcha-container"></div>
+            <button class="btn btn-primary" type="button" onclick="phoneAuth();">SendCode</button>
+        </form><br>
+        <h1>Enter Verification code</h1>
+        <form>
+            <input class="form-control form-control-sm" style="width: 280px;"  type="text" id="verificationCode" placeholder="Enter verification code">
+            <button  class="btn btn-primary" type="button" onclick="codeverify();">Verify code</button>
+        
+        </form>
+    </div>
+</div>
+</div>
+    <div id="mob-auth-done">
+        <div class="container">
+            <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 track-status">
+            <div class="inStatus">   
+              <button onclick="logout()" class="btn btn-primary" id="logout">Logout</button> 
+                <h3>Track Application Status</h3>
+                <div class="flex-column ">
+                <div class="form-group  required" style="width: 280px;height: 80px;">
+                    <label for="postID" class="control-label">Enter Mobile Number</label>
+                
+
+                    <input type="number" id="postID" placeholder="Enter Register Mobile Number" class="form-control form-control-sm"  autocomplete="off" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); "  />
+                    <input type="submit" value="Enter" class="btn btn-primary" id="submitBtn">
+                </div>
+                <div class="row">
+                <div id="statusdiv" class="col-md-6 col-sm-12 col-xs-12">
+                    <hr />
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+         
+        </div>
+    </div>
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="form.js"></script>
+        <script src="app.js"></script>
+        <script src="mob-login.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+     
+    </body>
+</html>

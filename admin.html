@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="navigation-bar" >
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <a class="navbar-brand" href="index.html">Nari Shakti</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar"
+                aria-expanded="false"
+                aria-controls="navbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <ul class="navbar-nav ml-auto" >
+                  <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+    </head>
+    <body>
+      <div class="auth" id="login-div">
+        <h4>Login</h4>
+        <input type="email" placeholder="email.." id="email_field"/>
+        <input type="password" placeholder="password.." id="password_field"/>
+        <button onclick="login()" class="btn btn-primary" id="loginBtn">Login to Account</button> 
+      </div>
+
+      <div class="auth-done" id="user-div">
+        <div class="container">
+          <button onclick="logout()" class="btn btn-primary" id="logout">Logout</button> 
+
+
+
+
+          <div class="container">
+            <div class="row">
+              <div class="row" id="c-1">
+              <div class="col-md-6 col-sm-12 col-xs-12 track-status">
+                <div class="Update-div row">   
+                    <h3>Change Application Data</h3>
+                    <div class="form-group  required col-md-12 col-sm-12 col-xs-12" style="width: 280px;height: 80px;" id="update-form">
+                       <div class="div"> <label for="postID" class="control-label">Enter Mobile Number</label>
+                        <input type="number" id="postID" placeholder="Enter Register Mobile Number" class="form-control form-control-sm form-group"  autocomplete="off" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); "/>
+                        <input type="submit" value="Enter" class="btn btn-primary form-group" id="Sub"> 
+                        <div id="updatediv">
+                        <label class="control-label col-md-12 col-sm-12 col-xs-12">Update Status:</label>
+                        <select class="form-control form-group" form="update-form" id="status-list" onchange="statusChange()">
+                        <option>Click here to Select</option>
+                        <option value="Complaint Recieved">Complaint Recieved</option>
+                        <option value="Field Verification Pending">Field Verification Pending</option>
+                        <option value="Action Taken">Action Taken </option>
+                        <option value="Case Closed">Case Closed </option>
+                      <input type="submit" value="Enter" class="btn btn-primary form-group" onclick="rel()"id="Update-Status"> 
+                    </div>
+                    </div>
+                    </div>
+                    <div class="seperator">
+                      
+                    </div>
+               
+                  
+                </div>
+                </div>
+                <div id="upd-div" class="col-md-12 col-sm-12 col-xs-12">
+                  
+                </div>
+              </div>
+    
+              
+                <div class="col-md-12 col-sm-12 col-xs-12 complaint-button">
+                    <div class="inComp">
+                      <div style="display:inline-block">
+                        <hr >
+                        <h3> Complaints Recieved</h3>
+                                
+                        <div class="filter">
+                                  <select class="form-control form-group" form="update-form" id="filter" onchange="showbyFilter()">
+                                    <option value="default">Filter By</option>
+                                    <option value="Complaint Recieved">Complaint Recieved</option>
+                                    <option value="Field Verification Pending">Field Verification Pending</option>
+                                    <option value="Action Taken">Action Taken </option>
+                                    <option value="Case Closed">Case Closed </option>
+                                  </select>
+                             
+                                </div>
+                              </div>
+                        <div class="row ">
+                          <div class="col-md-12 col-sm-3 col-xs-2" id="complaints">
+                            
+                          </div>
+                          <div class="pFil">
+                          <div class="col-md-12 col-sm-3 col-xs-2" id="CompRec">
+                           
+                        </div>
+                        <div class="col-md-12 col-sm-3 col-xs-2" id="ActTaken">
+                         
+                      </div>
+                      <div class="col-md-12 col-sm-3 col-xs-2" id="FieldVer">
+                       
+                    </div>
+                    <div class="col-md-12 col-sm-3 col-xs-2" id="closed">
+                      
+                  </div>
+                      </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+        </div>
+         
+            
+             
+           
+        </div>  
+        </div>
+    
+        
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="form.js"></script>
+        <script src="app.js"></script>
+        <script src="admin.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+     
+    </body>
+</html>
